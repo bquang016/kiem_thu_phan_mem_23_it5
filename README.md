@@ -67,3 +67,62 @@
 
 
 ---
+
+
+## TUẦN 2
+
+### Bài tập 3: Thực hành kiểm thử tự động End-to-End với Cypress
+- **Ngày nộp:** 14/01/2026  
+- **Trạng thái:** Hoàn thành  
+
+#### Công nghệ sử dụng
+- **Ngôn ngữ lập trình:** JavaScript (Node.js)  
+- **Framework kiểm thử:** Cypress  
+- **Website đối tượng:** [SauceDemo](https://www.saucedemo.com)  
+- **Công cụ soạn thảo:** IntelliJ IDE 
+
+#### Quy trình thực hiện
+1. Khởi tạo dự án Node.js và cài đặt thư viện Cypress.
+2. Cấu hình môi trường và tạo cấu trúc thư mục E2E (`cypress/e2e`).
+3. Xây dựng các kịch bản kiểm thử (Test Scripts):
+   - **Login Test:** Kiểm tra đăng nhập thành công và xử lý lỗi khi sai thông tin.
+   - **Cart & Sort Test:** Kiểm tra thêm/xóa sản phẩm vào giỏ hàng và chức năng sắp xếp giá.
+   - **Checkout Test:** Kiểm tra luồng thanh toán từ giỏ hàng đến trang xác nhận.
+4. Thực thi kiểm thử trên trình duyệt (Chrome) và xác minh kết quả.
+
+#### Hướng dẫn chạy kiểm thử
+### Yêu cầu môi trường:
+- Node.js (phiên bản 14 trở lên)
+- Trình duyệt Chrome hoặc Edge
+
+### Cách sử dụng và chạy:
+1. Mở terminal tại thư mục chứa bài tập Cypress (`cypress-exercise`):
+   ```bash
+   cd cypress-exercise
+2. Cài đặt các thư viện phụ thuộc (nếu clone về máy mới):
+   ```bash
+   npm install
+3. Mở giao diện Cypress Runner:
+   ```bash
+   npx cypress open
+4. Chọn E2E Testing -> Chọn trình duyệt -> Chọn file kịch bản (login_spec.cy.js, cart_spec.cy.js, hoặc checkout_spec.cy.js) để chạy.
+
+### Minh chứng kết quả
+### cart_spec.cy.js:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9ae18f09-b6f0-4c45-aa6f-e3a010c16209" />
+
+### checkout_spec.cy.js:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/0249266a-6865-458f-98fb-291b25fe5380" />
+
+### login_spec.cy.js:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c84d2ab8-c19c-4629-8a1e-876cd81a857e" />
+
+### Mô tả ngắn gọn về các ca kiểm thử tự động bằng Cypress đã làm:
+- login_spec.cy.js: Kiểm thử chức năng xác thực người dùng, bao gồm trường hợp đăng nhập thành công (chuyển hướng đúng trang) và đăng nhập thất bại (hiển thị thông báo lỗi khi sai thông tin).
+
+- cart_spec.cy.js: Kiểm thử các thao tác với danh sách sản phẩm, bao gồm thêm/xóa sản phẩm trong giỏ hàng và chức năng sắp xếp (Sort) sản phẩm theo giá từ thấp đến cao.
+
+- checkout_spec.cy.js: Kiểm thử luồng thanh toán End-to-End, mô phỏng hành trình người dùng từ lúc chọn hàng, điền thông tin cá nhân đến khi chuyển sang trang xác nhận đơn hàng.
+
+
+
