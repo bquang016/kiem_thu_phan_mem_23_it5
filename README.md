@@ -40,4 +40,30 @@
 5. Thực thi các ca kiểm thử và kiểm tra kết quả.
 6. Đẩy toàn bộ mã nguồn lên GitHub để quản lý phiên bản.
 
+#### Hướng dẫn chạy dự án:
+### Yêu cầu môi trường:
+Để chạy và kiểm thử dự án, cần đảm bảo môi trường đáp ứng các yêu cầu sau:
+- Java JDK phiên bản 17 trở lên
+- Maven đã được cài đặt và cấu hình
+- IDE hỗ trợ Java (Visual Studio Code, IntelliJ IDEA hoặc Eclipse)
+
+### Cách sử dụng và chạy kiểm thử
+1. Clone repository từ GitHub về máy:
+ ``` git clone https://github.com/bquang016/kiem_thu_phan_mem_23_it5  ```
+2. Mở thư mục dự án bằng IDE hoặc terminal.
+3. Kiểm tra và đảm bảo Maven đã tải đầy đủ các thư viện phụ thuộc.
+4. Thực thi các ca kiểm thử bằng một trong các cách sau:
+- Chạy trực tiếp lớp `StudentAnalyzerTest` trong IDE.
+- Hoặc chạy bằng Maven với lệnh:
+  ```
+  mvn test
+  ```
+5. Quan sát kết quả kiểm thử hiển thị trên cửa sổ Test của IDE hoặc trên terminal.
+
+### Kết quả mong đợi
+- Tất cả các ca kiểm thử được thực thi thành công.
+- Các phương thức trong lớp `StudentAnalyzer` hoạt động đúng theo yêu cầu đề bài.
+- Không xuất hiện lỗi logic hoặc lỗi kiểm thử trong quá trình chạy.
+
+
 ---
