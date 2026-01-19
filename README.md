@@ -125,4 +125,35 @@
 - checkout_spec.cy.js: Kiểm thử luồng thanh toán End-to-End, mô phỏng hành trình người dùng từ lúc chọn hàng, điền thông tin cá nhân đến khi chuyển sang trang xác nhận đơn hàng.
 
 
+---
+## TUẦN 3
+### Bài tập 4: Áp dụng các kỹ thuật kiểm thử hộp đen (Black-box Testing) và đo độ bao phủ kiểm thử bằng công cụ JaCoCo.
+- **Ngày nộp:** 19/01/2026
+- **Trạng thái:** Hoàn thành
+#### Công nghệ sử dụng
+- **Ngôn ngữ lập trình:** Java
+- **Framework:** JUnit 5
+- **Công cụ đo độ bao phủ:** JaCoCo (Java Code Coverage)
+- **Công cụ xây dựng dự án:** Maven
+#### Quy trình thực hiện
+**Nâng cấp bộ kiểm thử cho StudentAnalyzer áp dụng 3 kỹ thuật chuyên sâu:**
+1. DT với JUnit (Decision Table Testing):
+- Tự kiểm tra thừa/thiếu ca kiểm thử với kỹ thuật bảng quyết định.
+- Đã xây dựng 10 Test Cases bao phủ toàn bộ các luật (Rules) nghiệp vụ.
+- Xử lý các tổ hợp điều kiện: Null list, Empty list, List chứa valid/invalid/excellent scores.
+2. BVA với JUnit (Boundary Value Analysis):
+- Tự kiểm tra thừa/thiếu ca kiểm thử với kỹ thuật giá trị biên.
+- Biên dữ liệu (Data Boundary): Kiểm tra các giá trị tại ngưỡng (7.999..., 8.0, 8.000...1), biên Max/Min (0.0, 10.0).
+- Biên cấu trúc (Structural Boundary): Kiểm tra size = 0, size = 1, và size lớn (1000 phần tử).
+3. EP với JUnit (Equivalence Partitioning):
+- Tự kiểm tra thừa/thiếu ca kiểm thử với kỹ thuật phân hoạch lớp tương đương.
+- Chia miền dữ liệu thành các lớp: Invalid Low (<0), Valid Normal (0-7.9), Valid Excellent (8-10), Invalid High (>10).
+- Bổ sung các Edge cases đặc biệt: NaN, Infinity.
 
+### Kết quả đo độ bao phủ kiểm thử với JaCoCo:
+- Câu lệnh thực thi: ``` mvn clean test jacoco:report ```
+- Độ bao phủ dòng lệnh (Line Coverage): 100%
+- Branch Coverage: Đảm bảo mọi nhánh rẽ if/else đều được kiểm tra cả 2 chiều (True/False).
+#### Minh chứng kết quả
+##### Báo cáo độ bao phủ Code (JaCoCo Report):
+<img width="1084" height="178" alt="image" src="https://github.com/user-attachments/assets/1e80e41b-7c58-4dba-9d21-9f95fb26df0a" />
